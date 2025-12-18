@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from apps.core.views import ProtobufWebhookView, protobuf_webhook_receiver
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("webhook/protobuf/", ProtobufWebhookView.as_view(), name="protobuf_webhook"),
+    path("api/protobuf-receiver/", protobuf_webhook_receiver, name="protobuf_receiver"),
 ]

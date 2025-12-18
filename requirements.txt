@@ -5,3 +5,6 @@ grpcio-tools==1.76.0
 protobuf==6.33.2
 sqlparse==0.5.4
 typing_extensions==4.15.0
+requests==2.31.0
+celery==5.3.4
+redis==5.0.1
